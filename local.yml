@@ -3,4 +3,6 @@
 
   tasks:
   - name: install vim
-    dnf: pkg=vim state=installed
+    apt:
+      name=vim
+      state=installed
