@@ -1,0 +1,7 @@
+---
+- hosts: all
+  remote_user: pi
+  tasks:
+  - name: Print variable 'name'
+    debug:
+      msg: '{{ name }}'
