@@ -1,8 +1,14 @@
 ---
-- hosts: local
-
+- hosts: all
+  remote_user: pi
   tasks:
   - name: install vim
     apt:
       name=vim
       state=installed
+    become: true
+  - name: install aws-cli
+    apt:
+      name=awscli
+      state=installed
+    become: true
